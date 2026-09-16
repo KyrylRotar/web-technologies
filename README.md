@@ -7,7 +7,7 @@
 * **ПІБ:** Ротар Кирил Віталійович
 * **Навчальний заклад:** Чернівецький національний університет імені Юрія Федьковича (ЧНУ)
 * **Академічна група:** 243Б (підгрупа 243-4)
-* **Email:** [rotar.kyryl@chnu.edu.ua](mailto:rotar.kyryl@chnu.edu.ua)
+* **Email:** [rotarkiril9@gmail.com](mailto:rotarkiril9@gmail.com)
 
 ---
 
@@ -28,4 +28,4 @@
 
 ## 📬 Контакти та посилання
 - **GitHub:** [KyrylRotar](https://github.com/KyrylRotar)
-- **Університетський Email:** `rotar.kyryl@chnu.edu.ua`[cite: 4]
+- **Університетський Email:** `kirilrotar9@gmail.com`
