@@ -1,0 +1,33 @@
+# Системні файли ОС
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Папки середовища розробки та редакторів (IDE)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Залежності та модулі (Node.js, Python тощо)
+node_modules/
+bower_components/
+venv/
+.venv/
+env/
+
+# Файли збірці та тимчасові файли
+dist/
+build/
+out/
+*.tmp
+*.log
+
+# Файли з секретами та змінними середовища
+.env
+.env.local
+*.pem
+*.key
