@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Останні новини</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 32px;
+            background: #f4f4f4;
+            color: #222;
+            font-family: Arial, sans-serif;
+        }
+
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header,
+        article,
+        aside,
+        footer {
+            padding: 18px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        header {
+            margin-bottom: 14px;
+        }
+
+        header h1 {
+            margin: 0 0 14px;
+            font-size: 24px;
+        }
+
+        nav a {
+            margin-right: 20px;
+            color: #666;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 14px;
+            align-items: start;
+        }
+
+        .news-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        article h2 {
+            margin: 0 0 8px;
+            font-size: 18px;
+        }
+
+        article p {
+            margin: 7px 0;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        article .author {
+            color: #222;
+            font-weight: bold;
+        }
+
+        aside h2 {
+            margin: 0 0 12px;
+            font-size: 18px;
+        }
+
+        aside ul {
+            margin: 0;
+            padding-left: 18px;
+            color: #666;
+            line-height: 1.9;
+        }
+
+        footer {
+            margin-top: 14px;
+            color: #666;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 16px;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Останні новини</h1>
+            <nav aria-label="Головна навігація">
+                <a href="#">Головна</a>
+                <a href="#news">Новини</a>
+                <a href="#contacts">Контакти</a>
+            </nav>
+        </header>
+
+        <div class="content">
+            <main id="news" class="news-list">
+                <article>
+                    <h2>Відкрито новий кампус університету</h2>
+                    <p><time datetime="2026-09-01">1 вересня 2026</time></p>
+                    <p>Університет відкрив новий сучасний кампус для студентів усіх факультетів. У будівлі облаштовано навчальні аудиторії, лабораторії та простори для спільної роботи.</p>
+                    <p class="author">Автор: Ірина Коваль</p>
+                </article>
+
+                <article>
+                    <h2>Стартував конкурс студентських проєктів</h2>
+                    <p><time datetime="2026-09-05">5 вересня 2026</time></p>
+                    <p>Студенти можуть подати індивідуальні або командні проєкти до 30 вересня. Для участі потрібно заповнити заявку та презентувати ідею перед конкурсною комісією.</p>
+                    <p class="author">Автор: Олег Петренко</p>
+                </article>
+
+                <article>
+                    <h2>Результати літньої практики</h2>
+                    <p><time datetime="2026-09-10">10 вересня 2026</time></p>
+                    <p>Під час літньої практики студенти застосували набуті знання в партнерських компаніях. Учасники вдосконалили професійні навички та отримали корисний досвід роботи в команді.</p>
+                    <p class="author">Автор: Марія Шевчук</p>
+                </article>
+            </main>
+
+            <aside>
+                <h2>Популярне</h2>
+                <ul>
+                    <li><a href="#news">Відкриття нової бібліотеки</a></li>
+                    <li><a href="#news">Перемога команди університету</a></li>
+                    <li><a href="#news">Стипендії для найкращих студентів</a></li>
+                    <li><a href="#news">Міжнародна освітня конференція</a></li>
+                </ul>
+            </aside>
+        </div>
+
+        <footer id="contacts">
+            <hr>
+            <p>&copy; 2026 Останні новини</p>
+            <p>Іван Петренко, гр. КН-21 · <a href="mailto:ivan.petrenko@example.com">ivan.petrenko@example.com</a></p>
+        </footer>
+    </div>
+</body>
+</html>
