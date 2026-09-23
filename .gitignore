@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -17,8 +18,42 @@ dist-ssr
 !.vscode/extensions.json
 .idea
 .DS_Store
+=======
+# Системні файли ОС
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Папки середовища розробки та редакторів (IDE)
+.vscode/
+.idea/
+>>>>>>> 0190609c5fe477ebf413f6a080bf2e84daec851b
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
+<<<<<<< HEAD
 *.sw?
+=======
+*.swp
+
+# Залежності та модулі (Node.js, Python тощо)
+node_modules/
+bower_components/
+venv/
+.venv/
+env/
+
+# Файли збірці та тимчасові файли
+dist/
+build/
+out/
+*.tmp
+*.log
+
+# Файли з секретами та змінними середовища
+.env
+.env.local
+*.pem
+*.key
+>>>>>>> 0190609c5fe477ebf413f6a080bf2e84daec851b
