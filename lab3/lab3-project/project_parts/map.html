@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Завдання 5 — Інтерактивна карта України</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px 16px;
+      color: #203047;
+      font-family: Arial, sans-serif;
+      background: #f3f6fa;
+    }
+
+    main {
+      width: min(900px, 100%);
+      margin: 0 auto;
+    }
+
+    h1,
+    .intro,
+    .home-link {
+      text-align: center;
+    }
+
+    .map-frame {
+      display: flex;
+      justify-content: center;
+      margin: 24px auto;
+      padding: 12px;
+      border: 1px solid #c6d4e2;
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    .map-frame object {
+      display: block;
+      width: min(700px, 100%);
+      aspect-ratio: 35 / 24;
+      border: 0;
+    }
+
+    details {
+      padding: 16px;
+      border: 1px solid #c6d4e2;
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .region-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 8px 24px;
+      padding-left: 24px;
+    }
+
+    a {
+      color: #07579b;
+    }
+
+    .attribution {
+      margin-top: 20px;
+      color: #52657a;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .home-link {
+      margin-top: 24px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Інтерактивна карта України</h1>
+    <p class="intro">Натисніть на область або місто на карті, щоб відкрити відповідну статтю української Вікіпедії.</p>
+
+    <div class="map-frame">
+      <object type="image/svg+xml" data="../img/ukraine-oblasts.svg" title="Карта областей України з інтерактивними посиланнями">
+        <p>Не вдалося відобразити карту. Скористайтеся <a href="#region-list">списком посилань на регіони</a> нижче.</p>
+      </object>
+    </div>
+
+    <details id="region-list">
+      <summary>Список областей і міст зі спеціальним статусом</summary>
+      <ul class="region-list">
+        <li><a href="https://uk.wikipedia.org/wiki/Вінницька_область" target="_blank" rel="noopener noreferrer">Вінницька область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Волинська_область" target="_blank" rel="noopener noreferrer">Волинська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Дніпропетровська_область" target="_blank" rel="noopener noreferrer">Дніпропетровська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Донецька_область" target="_blank" rel="noopener noreferrer">Донецька область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Житомирська_область" target="_blank" rel="noopener noreferrer">Житомирська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Закарпатська_область" target="_blank" rel="noopener noreferrer">Закарпатська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Запорізька_область" target="_blank" rel="noopener noreferrer">Запорізька область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Івано-Франківська_область" target="_blank" rel="noopener noreferrer">Івано-Франківська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Київська_область" target="_blank" rel="noopener noreferrer">Київська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Кіровоградська_область" target="_blank" rel="noopener noreferrer">Кіровоградська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Луганська_область" target="_blank" rel="noopener noreferrer">Луганська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Львівська_область" target="_blank" rel="noopener noreferrer">Львівська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Миколаївська_область" target="_blank" rel="noopener noreferrer">Миколаївська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Одеська_область" target="_blank" rel="noopener noreferrer">Одеська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Полтавська_область" target="_blank" rel="noopener noreferrer">Полтавська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Рівненська_область" target="_blank" rel="noopener noreferrer">Рівненська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Сумська_область" target="_blank" rel="noopener noreferrer">Сумська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Тернопільська_область" target="_blank" rel="noopener noreferrer">Тернопільська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Харківська_область" target="_blank" rel="noopener noreferrer">Харківська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Херсонська_область" target="_blank" rel="noopener noreferrer">Херсонська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Хмельницька_область" target="_blank" rel="noopener noreferrer">Хмельницька область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Черкаська_область" target="_blank" rel="noopener noreferrer">Черкаська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Чернівецька_область" target="_blank" rel="noopener noreferrer">Чернівецька область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Чернігівська_область" target="_blank" rel="noopener noreferrer">Чернігівська область</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Автономна_Республіка_Крим" target="_blank" rel="noopener noreferrer">Автономна Республіка Крим</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Київ" target="_blank" rel="noopener noreferrer">Київ</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/Севастополь" target="_blank" rel="noopener noreferrer">Севастополь</a></li>
+      </ul>
+    </details>
+
+    <p class="attribution">Карта: <a href="https://commons.wikimedia.org/wiki/File:Map_of_Ukraine_Oblasts_simple_4_colors.svg" target="_blank" rel="noopener noreferrer">Map of Ukraine Oblasts simple 4 colors.svg</a>, автор Amakuha, ліцензія <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>. До карти додано інтерактивні посилання на регіони.</p>
+    <p class="home-link"><a href="../index.html">Повернутись на головну</a></p>
+  </main>
+</body>
+</html>
