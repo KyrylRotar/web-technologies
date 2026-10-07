@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Завдання 1 — Таблиця</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    main {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 16px;
+    }
+
+    table {
+      width: min(400px, calc(100vw - 32px));
+      aspect-ratio: 1;
+      table-layout: fixed;
+      border-collapse: collapse;
+      border: 2px solid #000;
+    }
+
+    td {
+      border: 2px solid #000;
+    }
+
+    .turquoise {
+      background-color: #31e6c5;
+    }
+
+    .cream {
+      background-color: #fffbd0;
+    }
+
+    .red {
+      background-color: #ff111c;
+    }
+
+    .blue {
+      background-color: #131ced;
+    }
+
+    .green {
+      background-color: #29f322;
+    }
+
+    .yellow {
+      background-color: #ffff24;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <table aria-label="Таблиця з комірками різних кольорів">
+      <tbody>
+        <tr>
+          <td class="turquoise" colspan="8"></td>
+        </tr>
+        <tr>
+          <td class="cream" rowspan="6"></td>
+          <td class="turquoise" colspan="6"></td>
+          <td class="cream" rowspan="6"></td>
+        </tr>
+        <tr>
+          <td class="cream"></td>
+          <td class="turquoise" colspan="4"></td>
+          <td class="cream"></td>
+        </tr>
+        <tr>
+          <td class="cream"></td>
+          <td class="cream"></td>
+          <td class="red"></td>
+          <td class="blue"></td>
+          <td class="cream"></td>
+          <td class="cream"></td>
+        </tr>
+        <tr>
+          <td class="cream"></td>
+          <td class="cream"></td>
+          <td class="green"></td>
+          <td class="yellow"></td>
+          <td class="cream"></td>
+          <td class="cream"></td>
+        </tr>
+        <tr>
+          <td class="cream"></td>
+          <td class="turquoise" colspan="4"></td>
+          <td class="cream"></td>
+        </tr>
+        <tr>
+          <td class="turquoise" colspan="6"></td>
+        </tr>
+        <tr>
+          <td class="turquoise" colspan="8"></td>
+        </tr>
+      </tbody>
+    </table>
+    <a href="../index.html">Повернутись на головну</a>
+  </main>
+</body>
+</html>
