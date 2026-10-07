@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" role="img" aria-labelledby="title description">
+  <title id="title">Планер тижня</title>
+  <desc id="description">Відкритий планер із розкладом, олівцем і годинником</desc>
+  <rect width="400" height="400" rx="32" fill="#eaf2fa"/>
+  <circle cx="320" cy="82" r="37" fill="#fffa69"/>
+  <path d="M75 98c35-29 73-29 110 0v203c-37-26-75-26-110 0z" fill="#fff" stroke="#203047" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M185 98c37-29 75-29 110 0v203c-35-26-73-26-110 0z" fill="#fff" stroke="#203047" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M185 99v202" stroke="#203047" stroke-width="7"/>
+  <g stroke="#8aa0b8" stroke-width="5" stroke-linecap="round">
+    <path d="M98 137h62M98 170h62M98 203h62M98 236h62M211 137h62M211 170h62M211 203h62M211 236h62"/>
+  </g>
+  <g fill="#31b7a2">
+    <circle cx="108" cy="137" r="6"/><circle cx="108" cy="170" r="6"/>
+    <circle cx="221" cy="203" r="6"/><circle cx="221" cy="236" r="6"/>
+  </g>
+  <circle cx="305" cy="276" r="43" fill="#fff" stroke="#203047" stroke-width="7"/>
+  <path d="M305 249v29l20 12" fill="none" stroke="#ff5b2d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m79 327 83-69 19 23-83 69-27 7z" fill="#ff5b2d" stroke="#203047" stroke-width="6" stroke-linejoin="round"/>
+  <path d="m79 327 19 23-27 7z" fill="#fffa69" stroke="#203047" stroke-width="6" stroke-linejoin="round"/>
+</svg>

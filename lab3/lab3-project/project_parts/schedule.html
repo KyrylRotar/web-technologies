@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Завдання 3 — Розклад і вільний час</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px 16px;
+      color: #203047;
+      font-family: Arial, sans-serif;
+      background: #f3f6fa;
+    }
+
+    h1 {
+      margin: 0 auto 24px;
+      text-align: center;
+    }
+
+    .schedule-container {
+      width: min(900px, 100%);
+      margin: 0 auto;
+    }
+
+    .day-navigation,
+    .day-card {
+      margin-bottom: 24px;
+      padding: 20px;
+      border: 1px solid #d5dfeb;
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .day-navigation ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 24px;
+      margin: 0;
+      padding-left: 24px;
+    }
+
+    a {
+      color: #07579b;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      text-align: center;
+    }
+
+    .table-block {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border: 2px solid #203047;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    th,
+    td {
+      padding: 12px;
+      border: 1px solid #8798ac;
+    }
+
+    thead {
+      color: #fff;
+      background: #07579b;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #eaf2fa;
+    }
+
+    .image-block {
+      display: flex;
+      justify-content: center;
+      margin-top: 16px;
+    }
+
+    .image-block img {
+      display: block;
+      width: min(400px, 100%);
+      height: auto;
+    }
+
+    .home-link {
+      margin: 24px 0 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Розклад навчання та вільного часу</h1>
+  <div class="schedule-container">
+    <div class="day-navigation">
+      <ul>
+        <li><a href="#monday">Понеділок</a></li>
+        <li><a href="#tuesday">Вівторок</a></li>
+        <li><a href="#wednesday">Середа</a></li>
+        <li><a href="#thursday">Четвер</a></li>
+        <li><a href="#friday">П’ятниця</a></li>
+        <li><a href="#saturday">Субота</a></li>
+        <li><a href="#sunday">Неділя</a></li>
+      </ul>
+    </div>
+
+    <div class="day-card" id="monday">
+      <h2>Понеділок</h2>
+      <div class="table-block">
+        <table>
+          <thead>
+            <tr><th>Час</th><th>Перший тиждень</th><th>Другий тиждень</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>08:30–10:00</td><td>Вебтехнології</td><td>Дискретна математика</td></tr>
+            <tr><td>10:15–11:45</td><td>Програмування</td><td>Вебтехнології</td></tr>
+            <tr><td>12:00–13:30</td><td>Англійська мова</td><td>Програмування</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="image-block"><img src="../img/weekly-planner.svg" width="400" height="400" alt="Ілюстрація навчального планера"></div>
+    </div>
+
+    <div class="day-card" id="tuesday">
+      <h2>Вівторок</h2>
+      <div class="table-block">
+        <table>
+          <thead>
+            <tr><th>Час</th><th>Перший тиждень</th><th>Другий тиждень</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>08:30–10:00</td><td>Алгоритми</td><td>Програмування</td></tr>
+            <tr><td>10:15–11:45</td><td>Дискретна математика</td><td>Алгоритми</td></tr>
+            <tr><td>12:00–13:30</td><td>Вебтехнології</td><td>Англійська мова</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="image-block"><img src="../img/weekly-planner.svg" width="400" height="400" alt="Ілюстрація навчального планера"></div>
+    </div>
+
+    <div class="day-card" id="wednesday">
+      <h2>Середа</h2>
+      <div class="table-block">
+        <table>
+          <thead>
+            <tr><th>Час</th><th>Перший тиждень</th><th>Другий тиждень</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>08:30–10:00</td><td>Програмування</td><td>Математичний аналіз</td></tr>
+            <tr><td>10:15–11:45</td><td>Англійська мова</td><td>Вебтехнології</td></tr>
+            <tr><td>12:00–13:30</td><td>Математичний аналіз</td><td>Практикум</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="image-block"><img src="../img/weekly-planner.svg" width="400" height="400" alt="Ілюстрація навчального планера"></div>
+    </div>
+
+    <div class="day-card" id="thursday">
+      <h2>Четвер</h2>
+      <div class="table-block">
+        <table>
+          <thead>
+            <tr><th>Час</th><th>Перший тиждень</th><th>Другий тиждень</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>08:30–10:00</td><td>Вебтехнології</td><td>Алгоритми</td></tr>
+            <tr><td>10:15–11:45</td><td>Математичний аналіз</td><td>Програмування</td></tr>
+            <tr><td>12:00–13:30</td><td>Практикум</td><td>Дискретна математика</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="image-block"><img src="../img/weekly-planner.svg" width="400" height="400" alt="Ілюстрація навчального планера"></div>
+    </div>
+
+    <div class="day-card" id="friday">
+      <h2>П’ятниця</h2>
+      <div class="table-block">
+        <table>
+          <thead>
+            <tr><th>Час</th><th>Перший тиждень</th><th>Другий тиждень</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>08:30–10:00</td><td>Дискретна математика</td><td>Вебтехнології</td></tr>
+            <tr><td>10:15–11:45</td><td>Алгоритми</td><td>Англійська мова</td></tr>
+            <tr><td>12:00–13:30</td><td>Програмування</td><td>Математичний аналіз</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="image-block"><img src="../img/weekly-planner.svg" width="400" height="400" alt="Ілюстрація навчального планера"></div>
+    </div>
+
+    <div class="day-card" id="saturday">
+      <h2>Субота — вільний час</h2>
+      <div class="table-block">
+        <table>
+          <thead>
+            <tr><th>Час</th><th>План</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>09:00–11:00</td><td>Сніданок і відпочинок</td></tr>
+            <tr><td>11:00–14:00</td><td>Прогулянка або зустріч із друзями</td></tr>
+            <tr><td>14:00–18:00</td><td>Особисті справи та хобі</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="image-block"><img src="../img/weekly-planner.svg" width="400" height="400" alt="Ілюстрація навчального планера"></div>
+    </div>
+
+    <div class="day-card" id="sunday">
+      <h2>Неділя — вільний час</h2>
+      <div class="table-block">
+        <table>
+          <thead>
+            <tr><th>Час</th><th>План</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>09:00–11:00</td><td>Відпочинок і сніданок</td></tr>
+            <tr><td>11:00–14:00</td><td>Підготовка до наступного тижня</td></tr>
+            <tr><td>14:00–18:00</td><td>Прогулянка та вільний час</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="image-block"><img src="../img/weekly-planner.svg" width="400" height="400" alt="Ілюстрація навчального планера"></div>
+    </div>
+
+    <div class="home-link"><a href="../index.html">Повернутись на головну</a></div>
+  </div>
+</body>
+</html>
