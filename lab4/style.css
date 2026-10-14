@@ -1,0 +1,48 @@
+p.text-background span {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+div p.text-background span {
+    background-color: yellow;
+}
+
+span span {
+    background-color: #d3d3d3;
+    text-decoration: line-through;
+}
+
+ol span span {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+section > p {
+    text-shadow: 3px 3px 5px #777;
+    text-indent: 50px;
+}
+
+li > ul {
+    list-style-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 12 12%22%3E%3Ccircle cx=%226%22 cy=%226%22 r=%224%22 fill=%22%23008000%22/%3E%3C/svg%3E");
+}
+
+div > p.text-background {
+    word-spacing: 50px;
+}
+
+.text-bold > p {
+    font-weight: bold;
+}
+
+.text-bold > section > p {
+    line-height: 45px;
+}
+
+img + p {
+    background-color: brown;
+}
+
+section ~ p {
+    color: red;
+}
