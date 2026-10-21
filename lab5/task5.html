@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №5 — Завдання 5</title>
+    <link rel="stylesheet" href="task5.css">
+</head>
+<body>
+    <main>
+        <h1>Властивості блоків і відображення</h1>
+
+        <section id="model">
+            <h2>1. Модель розміру блоку</h2>
+            <div class="box-example content-box">
+                <strong>content-box</strong>
+                <p>Загальна ширина: 300 + 2 × 20 + 2 × 5 = <b>350px</b></p>
+            </div>
+            <div class="box-example border-box">
+                <strong>border-box</strong>
+                <p>Загальна ширина: <b>300px</b></p>
+            </div>
+        </section>
+
+        <section id="overflow">
+            <h2>2. Переповнення вмісту</h2>
+            <div class="overflow-example visible">
+                <strong>overflow: visible</strong> — Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+            </div>
+            <div class="overflow-example hidden">
+                <strong>overflow: hidden</strong> — Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+            </div>
+            <div class="overflow-example scroll">
+                <strong>overflow: scroll</strong> — Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+            </div>
+            <div class="overflow-example auto">
+                <strong>overflow: auto</strong> — Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+            </div>
+        </section>
+
+        <section id="display">
+            <h2>3. Горизонтальне меню</h2>
+            <ul>
+                <li><a href="#model">Модель блоку</a></li>
+                <li><a href="#overflow">Переповнення</a></li>
+                <li><a href="#display">Відображення</a></li>
+                <li><a href="#about">Прихований пункт</a></li>
+                <li><a href="#about">Про завдання</a></li>
+            </ul>
+            <p id="about">Пункти меню розташовані в ряд без використання Flexbox або float.</p>
+        </section>
+    </main>
+</body>
+</html>

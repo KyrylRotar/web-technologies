@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 28px 16px;
+    color: #253b50;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f8;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #294f70;
+    text-align: center;
+}
+
+section {
+    margin: 24px 0;
+    padding: 20px;
+    border: 1px solid #cad8e2;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+h2 {
+    margin-top: 0;
+    color: #37647e;
+}
+
+.box-example {
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 5px solid #37647e;
+    vertical-align: top;
+    background-color: #d8e8f1;
+}
+
+.box-example p {
+    margin-bottom: 0;
+}
+
+.content-box {
+    box-sizing: content-box;
+    border-color: #37647e;
+    background-color: #d8e8f1;
+}
+
+.border-box {
+    box-sizing: border-box;
+    border-color: #47765e;
+    background-color: #d7eadf;
+}
+
+.overflow-example {
+    max-height: 80px;
+    margin: 16px 0 24px;
+    padding: 10px;
+    border: 2px solid #7894a7;
+    line-height: 1.5;
+    background-color: #f4f8fa;
+}
+
+.visible {
+    overflow: visible;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.scroll {
+    overflow: scroll;
+}
+
+.auto {
+    overflow: auto;
+}
+
+section > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #e7eff4;
+}
+
+section > ul > li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+section > ul > li > a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #37647e;
+}
+
+section > ul > li > a:hover,
+section > ul > li > a:focus-visible {
+    background-color: #b36549;
+}
+
+/* display:none removes this item from layout and keyboard navigation. Unlike visibility:hidden it leaves no empty space; unlike opacity:0 it cannot be clicked. */
+section > ul > li:nth-child(4) {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px 10px;
+    }
+
+    section {
+        padding: 16px 12px;
+    }
+
+    .box-example {
+        max-width: calc(100% - 40px);
+    }
+}
