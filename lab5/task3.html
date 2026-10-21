@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №5 — Завдання 3</title>
+    <link rel="stylesheet" href="task3.css">
+</head>
+<body>
+    <main>
+        <header>
+            <p class="eyebrow">Знайомство зі студентом</p>
+            <h1>Анкета студента</h1>
+            <p class="intro">Заповніть поля анкети. Поля зі знаком * обов’язкові.</p>
+        </header>
+
+        <form action="#" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
+            <fieldset>
+                <legend>Особисті дані</legend>
+
+                <div class="field">
+                    <label for="first-name">Ім’я *</label>
+                    <input type="text" id="first-name" name="first_name" placeholder="Наприклад, Олена" required>
+                    <p class="hint">Введіть своє ім’я.</p>
+                </div>
+
+                <div class="field">
+                    <label for="last-name">Прізвище *</label>
+                    <input type="text" id="last-name" name="last_name" placeholder="Наприклад, Петренко" required>
+                    <p class="hint">Введіть своє прізвище.</p>
+                </div>
+
+                <div class="field">
+                    <label for="email">Електронна пошта *</label>
+                    <input type="email" id="email" name="email" placeholder="name@example.com" autocomplete="off" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Вкажіть адресу у форматі name@example.com" required>
+                    <p class="hint">Переконайтеся, що адреса має правильний формат.</p>
+                </div>
+
+                <div class="field">
+                    <label for="phone">Мобільний номер *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+380XXXXXXXXX" pattern="\+380[0-9]{9}" title="Введіть номер у форматі +380XXXXXXXXX" required>
+                    <p class="hint">Формат: +380 і дев’ять цифр.</p>
+                </div>
+
+                <div class="field">
+                    <label for="birth-date">Дата народження</label>
+                    <input type="date" id="birth-date" name="birth_date">
+                </div>
+
+                <div class="field">
+                    <label for="password">Пароль *</label>
+                    <input type="password" id="password" name="password" placeholder="6 символів" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{6}" title="Рівно 6 символів: велика й мала літера та цифра" required>
+                    <p class="hint">Рівно 6 символів, зокрема велика й мала літери та цифра.</p>
+                </div>
+
+                <div class="field">
+                    <label for="about">Коротко про себе</label>
+                    <textarea id="about" name="about" rows="4" placeholder="Напишіть кілька слів про себе"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Навчання</legend>
+
+                <div class="field">
+                    <span class="field-label">Форма навчання</span>
+                    <div class="choice-list">
+                        <label class="choice"><input type="radio" name="study_form" value="full_time"> Денна</label>
+                        <label class="choice"><input type="radio" name="study_form" value="part_time"> Заочна</label>
+                        <label class="choice"><input type="radio" name="study_form" value="distance"> Дистанційна</label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <span class="field-label">Курс</span>
+                    <div class="choice-list">
+                        <label class="choice"><input type="radio" name="course" value="1" checked> Перший</label>
+                        <label class="choice"><input type="radio" name="course" value="2"> Другий</label>
+                        <label class="choice"><input type="radio" name="course" value="3"> Третій</label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="faculty">Факультет</label>
+                    <select id="faculty" name="faculty">
+                        <option value="computer_science">Комп’ютерних наук</option>
+                        <option value="mathematics">Математики</option>
+                        <option value="economics" selected>Економіки</option>
+                        <option value="philology">Філології</option>
+                        <option value="other">Інший</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="subjects">Улюблені дисципліни</label>
+                    <select id="subjects" name="subjects" multiple size="6">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="programming">Програмування</option>
+                        <option value="mathematics">Математика</option>
+                        <option value="english">Англійська мова</option>
+                    </select>
+                    <p class="hint">Для вибору кількох пунктів утримуйте Ctrl або Command.</p>
+                </div>
+
+                <div class="field">
+                    <label for="study-area">Напрям навчання</label>
+                    <select id="study-area" name="study_area">
+                        <optgroup label="Веброзробка">
+                            <option value="html_css">HTML і CSS</option>
+                            <option value="frontend">Frontend</option>
+                            <option value="backend">Backend</option>
+                        </optgroup>
+                        <optgroup label="Програмування">
+                            <option value="java">Java</option>
+                            <option value="python">Python</option>
+                            <option value="cpp">C++</option>
+                        </optgroup>
+                        <optgroup label="Математика">
+                            <option value="algebra">Алгебра</option>
+                            <option value="analysis">Математичний аналіз</option>
+                            <option value="statistics">Статистика</option>
+                        </optgroup>
+                        <optgroup label="Мови">
+                            <option value="english">Англійська</option>
+                            <option value="german">Німецька</option>
+                            <option value="french">Французька</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <span class="field-label">Інтереси</span>
+                    <div class="choice-list">
+                        <label class="choice"><input type="checkbox" name="interests" value="web"> Веброзробка</label>
+                        <label class="choice"><input type="checkbox" name="interests" value="design"> Дизайн</label>
+                        <label class="choice"><input type="checkbox" name="interests" value="games"> Ігри</label>
+                        <label class="choice"><input type="checkbox" name="interests" value="reading"> Читання</label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="career">Бажаний напрям кар’єри</label>
+                    <input type="text" id="career" name="career" list="career-options" placeholder="Почніть вводити напрям">
+                    <datalist id="career-options">
+                        <option value="Frontend-розробник">
+                        <option value="Backend-розробник">
+                        <option value="Вебдизайнер">
+                        <option value="Тестувальник">
+                        <option value="Аналітик даних">
+                    </datalist>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Додатково</legend>
+                <div class="field">
+                    <label for="audio-files">Аудіофайли</label>
+                    <input type="file" id="audio-files" name="audio_files" accept="audio/*" multiple>
+                    <p class="hint">Можна вибрати кілька аудіофайлів.</p>
+                </div>
+            </fieldset>
+
+            <div class="actions">
+                <button type="submit" name="submit_mode" value="post">Надіслати анкету методом POST</button>
+                <button type="reset">Очистити анкету</button>
+            </div>
+        </form>
+
+        <form action="#" method="get">
+            <fieldset>
+                <legend>Приклад GET-запиту</legend>
+                <div class="field">
+                    <label for="get-demo-name">Тестове значення для URL</label>
+                    <input type="text" id="get-demo-name" name="demo_name" placeholder="Наприклад, Олена">
+                    <p class="hint">Надсилається лише тестове поле, а не всі дані анкети.</p>
+                </div>
+                <div class="actions">
+                    <button type="submit" name="submit_mode" value="get">Показати GET у URL</button>
+                </div>
+            </fieldset>
+        </form>
+
+        <p class="note">GET додає тестове значення до URL. Обробка POST-запиту потребує вебсервера.</p>
+    </main>
+</body>
+</html>
