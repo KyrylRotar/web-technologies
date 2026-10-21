@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px;
+    color: #203d3a;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #234653;
+    background-image: url("img/landscape.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* If the viewport is narrower than 320px, the main element keeps its 320px minimum width and the page overflows horizontally. */
+main {
+    max-width: 900px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(249, 252, 244, 0.9);
+}
+
+header {
+    margin: -20px -20px 20px;
+    padding: 36px 28px;
+    color: #fff;
+    background: linear-gradient(125deg, rgba(24, 65, 69, 0.94), rgba(61, 117, 100, 0.88));
+}
+
+header h1 {
+    margin: 4px 0 10px;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    line-height: 1.15;
+}
+
+header p:last-child {
+    max-width: 620px;
+    margin-bottom: 0;
+}
+
+.eyebrow {
+    margin: 0;
+    color: #f3ce94;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+section {
+    margin: 20px 0;
+    padding: 18px;
+    border: 1px solid #cbd9ce;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.72);
+}
+
+h2 {
+    margin-top: 0;
+    color: #35685b;
+}
+
+code {
+    padding: 2px 5px;
+    border-radius: 4px;
+    color: #38574f;
+    background-color: #e6eee5;
+}
+
+/* Inline elements ignore width and height, so these 200px by 100px values do not size the divs. */
+.inline-tags div {
+    display: inline;
+    width: 200px;
+    height: 100px;
+    margin-right: 10px;
+    padding: 5px;
+    color: #fff;
+    background-color: #397c70;
+}
+
+.block-tags {
+    margin-top: 18px;
+}
+
+.block-tags span {
+    display: block;
+    width: 150px;
+    margin: 6px 0;
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #bc704a;
+}
+
+.repeat-grid,
+.size-grid,
+.attachment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.repeat-grid > div {
+    height: 200px;
+    border: 1px solid #a9c3ad;
+    background-image: url("img/tile.svg");
+    background-size: 60px 60px;
+}
+
+.repeat-grid span,
+.size-grid span {
+    display: inline-block;
+    margin: 8px;
+    padding: 5px 9px;
+    border-radius: 4px;
+    color: #234c43;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.repeat-x {
+    background-repeat: repeat-x;
+}
+
+.repeat-y {
+    background-repeat: repeat-y;
+}
+
+/* space keeps whole tiles and distributes gaps; round scales tiles so an integer number fits the area. */
+.repeat-space {
+    background-repeat: space;
+}
+
+.repeat-round {
+    background-repeat: round;
+}
+
+.size-grid > div {
+    width: 300px;
+    max-width: 100%;
+    height: 200px;
+    border: 2px solid #527b69;
+    background-image: url("img/landscape.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contain {
+    background-size: contain;
+}
+
+.cover {
+    background-size: cover;
+}
+
+.attachment-grid > div {
+    max-height: 150px;
+    overflow: auto;
+    padding: 12px;
+    border: 2px solid #527b69;
+    background-image: url("img/tile.svg");
+    background-size: 60px 60px;
+}
+
+/* scroll pins the background to the element; local scrolls it together with the element's content. */
+.attachment-scroll {
+    background-attachment: scroll;
+}
+
+.attachment-local {
+    background-attachment: local;
+}
+
+footer {
+    padding: 8px 0 0;
+    color: #5a7062;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 10px;
+    }
+
+    main {
+        padding: 14px;
+    }
+
+    header {
+        margin: -14px -14px 16px;
+        padding: 28px 18px;
+    }
+
+    section {
+        padding: 14px;
+    }
+
+    .repeat-grid,
+    .size-grid,
+    .attachment-grid {
+        grid-template-columns: 1fr;
+    }
+}
