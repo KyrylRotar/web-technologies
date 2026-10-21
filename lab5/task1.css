@@ -1,0 +1,96 @@
+div {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+    background-color: rgb(255, 165, 0);
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-position: inside;
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+}
+
+li {
+    list-style-position: inside;
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+}
+
+div > ul {
+    margin-bottom: 10px;
+    padding: 0 20px 0 50px;
+    background-color: rgb(103, 158, 128);
+    background-image: url("icons/checklist.svg");
+    background-position: 7px 8px;
+}
+
+li ul {
+    font-size: 18px;
+    font-style: italic;
+}
+
+li ul li {
+    margin-bottom: 10px;
+    padding-left: 40px;
+    background-color: rgb(153, 180, 102);
+    background-position: 4px center;
+}
+
+li.phone {
+    background-image: url("icons/phone.svg");
+}
+
+li.ticket {
+    background-image: url("icons/ticket.svg");
+}
+
+li.hotel {
+    background-image: url("icons/hotel.svg");
+}
+
+li.car {
+    background-image: url("icons/car.svg");
+}
+
+li.bar {
+    background-image: url("icons/bar.svg");
+}
+
+li.casino {
+    background-image: url("icons/casino.svg");
+}
+
+li.museum {
+    background-image: url("icons/museum.svg");
+}
+
+li.festival {
+    background-image: url("icons/festival.svg");
+}
+
+span {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+div > ul > li > span {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgb(199, 124, 106);
+}
+
+li ul li span {
+    background-color: rgb(218, 106, 32);
+}
