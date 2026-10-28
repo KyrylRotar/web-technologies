@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    padding: 32px 20px;
+    background: #f3f5f8;
+    color: #172033;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+    width: min(100%, 680px);
+}
+
+.page__title {
+    margin: 0 0 8px;
+    font-size: clamp(24px, 5vw, 32px);
+}
+
+.page__hint {
+    margin: 0 0 24px;
+    color: #526078;
+    line-height: 1.5;
+}
+
+.scene {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 640 / 255;
+    min-height: 220px;
+}
+
+.block {
+    position: absolute;
+    display: grid;
+    justify-items: center;
+    border: 3px solid #222831;
+    border-radius: 2px;
+    box-shadow: 0 3px 8px rgb(23 32 51 / 16%);
+}
+
+.block--one {
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 30.5%;
+    height: 25.5%;
+    align-content: center;
+    padding: 8px;
+    background: #08b45b;
+    color: #10251a;
+    font: inherit;
+    font-size: clamp(16px, 3vw, 23px);
+    cursor: pointer;
+    transition: filter 180ms ease, transform 180ms ease;
+}
+
+.block--one:hover,
+.block--one:focus-visible {
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+}
+
+.block--one:focus-visible,
+.block--two:focus-visible {
+    outline: 3px solid #f0a000;
+    outline-offset: 4px;
+}
+
+.block--two {
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 100%;
+    grid-template-rows: auto 1fr;
+    padding: 12px;
+    background: #568ed0;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 220ms ease, visibility 220ms ease;
+}
+
+.block--one:hover + .block--two,
+.block--one:focus-visible + .block--two,
+.block--two:hover,
+.block--two:focus-within {
+    opacity: 1;
+    visibility: visible;
+}
+
+.block__text {
+    margin: 0;
+    font-size: clamp(16px, 3.5vw, 23px);
+    line-height: 1.3;
+    text-align: center;
+}
+
+.block--three {
+    top: 60%;
+    right: 3.5%;
+    bottom: 5%;
+    left: 3.5%;
+    place-items: center;
+    padding: 8px;
+    background: #604a78;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 220ms ease, visibility 220ms ease;
+}
+
+.block--two:hover .block--three,
+.block--two:focus-within .block--three {
+    opacity: 1;
+    visibility: visible;
+}
+
+.block--three .block__text {
+    font-weight: 700;
+}
+
+@media (max-width: 480px) {
+    .scene {
+        min-height: 190px;
+    }
+
+    .block--two {
+        width: 66%;
+        padding: 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}

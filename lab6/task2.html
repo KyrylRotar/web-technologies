@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №6 — Завдання 2, варіант 13</title>
+    <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+    <main class="page">
+
+        <p class="page__hint">Наведіть курсор на Блок 1, а потім на Блок 2.</p>
+
+        <div class="scene" aria-label="Інтерактивна схема блоків">
+            <button class="block block--one" type="button" aria-controls="block-two">
+                Блок 1
+            </button>
+
+            <section class="block block--two" id="block-two" tabindex="0" aria-label="Блок 2">
+                <p class="block__text">Текст всередині Блоку 2</p>
+                <div class="block block--three">
+                    <p class="block__text">Блок 3</p>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
