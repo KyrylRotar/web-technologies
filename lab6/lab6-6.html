@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №6 — Завдання 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="popup-body">
+    <main class="popup-page">
+        <form class="popup-app">
+            <input class="popup-toggle" type="checkbox" id="popup-toggle"
+                   aria-label="Відкрити або закрити вікно сповіщень">
+            <section class="popup-demo" aria-labelledby="popup-page-title">
+                <p class="popup-demo__eyebrow">Лабораторна робота №6</p>
+                <h1 class="popup-demo__title" id="popup-page-title">Центр сповіщень</h1>
+                <p class="popup-demo__description">
+                    Відкрийте попап, щоб переглянути швидкі посилання. Кнопки працюють без JavaScript.
+                </p>
+
+                <label class="popup-button" for="popup-toggle">
+                    <span class="popup-button__icon" aria-hidden="true">✦</span>
+                    Відкрити сповіщення
+                </label>
+            </section>
+
+            <section class="popup-layer" aria-label="Вікно сповіщень">
+                <button class="popup-backdrop" type="reset" aria-label="Закрити вікно"></button>
+
+                <section class="popup-card" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+                <header class="popup-card__header">
+                    <div class="popup-card__heading">
+                        <span class="popup-card__badge" aria-hidden="true">✦</span>
+                        <div>
+                            <p class="popup-card__eyebrow">Швидкий доступ</p>
+                            <h2 class="popup-card__title" id="popup-title">Ваші сповіщення</h2>
+                        </div>
+                    </div>
+                    <button class="popup-close" type="reset" aria-label="Закрити попап">×</button>
+                </header>
+
+                <p class="popup-card__intro">Оберіть потрібний розділ або перегляньте всі доступні ярлики.</p>
+
+                <input class="more-toggle" type="checkbox" id="more-toggle"
+                       aria-label="Показати додаткові іконки">
+                <div class="popup-scroll" tabindex="0" aria-label="Прокручуваний список ярликів">
+                    <div class="icon-grid">
+                        <a class="icon-tile icon-tile--blue" id="calendar" href="#calendar">
+                            <span class="icon-tile__symbol" aria-hidden="true">▦</span>
+                            <span class="icon-tile__label">Календар</span>
+                        </a>
+                        <a class="icon-tile icon-tile--violet" id="messages" href="#messages">
+                            <span class="icon-tile__symbol" aria-hidden="true">✉</span>
+                            <span class="icon-tile__label">Повідомлення</span>
+                        </a>
+                        <a class="icon-tile icon-tile--orange" id="courses" href="#courses">
+                            <span class="icon-tile__symbol" aria-hidden="true">▤</span>
+                            <span class="icon-tile__label">Мої курси</span>
+                        </a>
+                        <a class="icon-tile icon-tile--green" id="tasks" href="#tasks">
+                            <span class="icon-tile__symbol" aria-hidden="true">✓</span>
+                            <span class="icon-tile__label">Завдання</span>
+                        </a>
+                        <a class="icon-tile icon-tile--pink" id="grades" href="#grades">
+                            <span class="icon-tile__symbol" aria-hidden="true">★</span>
+                            <span class="icon-tile__label">Оцінки</span>
+                        </a>
+                        <a class="icon-tile icon-tile--teal" id="profile" href="#profile">
+                            <span class="icon-tile__symbol" aria-hidden="true">◎</span>
+                            <span class="icon-tile__label">Профіль</span>
+                        </a>
+                    </div>
+
+                    <div class="icon-grid icon-grid--extra" aria-label="Додаткові ярлики">
+                        <a class="icon-tile icon-tile--blue" id="library" href="#library">
+                            <span class="icon-tile__symbol" aria-hidden="true">▣</span>
+                            <span class="icon-tile__label">Бібліотека</span>
+                        </a>
+                        <a class="icon-tile icon-tile--violet" id="support" href="#support">
+                            <span class="icon-tile__symbol" aria-hidden="true">?</span>
+                            <span class="icon-tile__label">Підтримка</span>
+                        </a>
+                        <a class="icon-tile icon-tile--orange" id="events" href="#events">
+                            <span class="icon-tile__symbol" aria-hidden="true">◷</span>
+                            <span class="icon-tile__label">Події</span>
+                        </a>
+                        <a class="icon-tile icon-tile--green" id="downloads" href="#downloads">
+                            <span class="icon-tile__symbol" aria-hidden="true">↓</span>
+                            <span class="icon-tile__label">Завантаження</span>
+                        </a>
+                        <a class="icon-tile icon-tile--pink" id="favorites" href="#favorites">
+                            <span class="icon-tile__symbol" aria-hidden="true">♥</span>
+                            <span class="icon-tile__label">Обране</span>
+                        </a>
+                        <a class="icon-tile icon-tile--teal" id="settings" href="#settings">
+                            <span class="icon-tile__symbol" aria-hidden="true">⚙</span>
+                            <span class="icon-tile__label">Налаштування</span>
+                        </a>
+                    </div>
+                </div>
+
+                <label class="more-button" for="more-toggle">
+                    <span class="more-button__more">Більше ярликів</span>
+                    <span class="more-button__less">Менше ярликів</span>
+                    <span class="more-button__arrow" aria-hidden="true">⌄</span>
+                </label>
+                </section>
+            </section>
+        </form>
+    </main>
+</body>
+</html>

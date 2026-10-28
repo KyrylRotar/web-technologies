@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №6 — Завдання 5</title>
+    <link rel="stylesheet" href="task5.css">
+</head>
+<body>
+    <main class="weather-page">
+        <h1 class="weather-page__title">Погода на тиждень</h1>
+
+        <section class="weather-widget" aria-label="Прогноз погоди">
+            <div class="forecast-card" aria-label="Прогноз на наступні дні">
+                <p class="forecast-card__title">Прогноз на тиждень</p>
+                <div class="forecast-list">
+                    <div class="forecast-day">
+                        <span>Mon</span>
+                        <span class="forecast-day__icon" aria-hidden="true">☀</span>
+                        <strong>17°</strong>
+                    </div>
+                    <div class="forecast-day">
+                        <span>Tue</span>
+                        <span class="forecast-day__icon" aria-hidden="true">☁</span>
+                        <strong>19°</strong>
+                    </div>
+                    <div class="forecast-day">
+                        <span>Wed</span>
+                        <span class="forecast-day__icon" aria-hidden="true">☀</span>
+                        <strong>16°</strong>
+                    </div>
+                    <div class="forecast-day">
+                        <span>Thu</span>
+                        <span class="forecast-day__icon" aria-hidden="true">☁</span>
+                        <strong>18°</strong>
+                    </div>
+                    <div class="forecast-day">
+                        <span>Fri</span>
+                        <span class="forecast-day__icon" aria-hidden="true">☀</span>
+                        <strong>21°</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weather-current" tabindex="0">
+                <p class="weather-current__location">Чернівці</p>
+                <div class="weather-cloud" role="img" aria-label="Хмарно">
+                    <span class="weather-cloud__shape"></span>
+                </div>
+                <div class="weather-current__details">
+                    <span class="weather-current__condition">Хмарно</span>
+                    <span class="weather-current__temperature">17°</span>
+                </div>
+            </div>
+
+            <button class="weather-arrow weather-arrow--previous" type="button" aria-label="Попередній день">‹</button>
+            <button class="weather-arrow weather-arrow--next" type="button" aria-label="Наступний день">›</button>
+        </section>
+        <p class="weather-page__hint">Наведіть курсор або перейдіть клавішею Tab на картку погоди.</p>
+    </main>
+</body>
+</html>
