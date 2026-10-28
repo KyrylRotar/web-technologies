@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №6 — Завдання 4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
+    <link rel="stylesheet" href="task4.css">
+</head>
+<body>
+    <header class="topbar">
+        <nav class="horizontal-nav" aria-label="Головна навігація">
+            <ul class="horizontal-menu">
+                <li class="horizontal-menu__item">
+                    <a class="horizontal-menu__link" href="#home" aria-label="Головна" aria-current="page">
+                        <span class="material-symbols-outlined" aria-hidden="true">home</span>
+                        <span class="visually-hidden">Головна</span>
+                    </a>
+                </li>
+                <li class="horizontal-menu__item">
+                    <a class="horizontal-menu__link" href="#courses" aria-label="Курси">
+                        <span class="material-symbols-outlined" aria-hidden="true">school</span>
+                        <span class="visually-hidden">Курси</span>
+                    </a>
+                    <ul class="dropdown">
+                        <li><a href="#web">Веброзробка</a></li>
+                        <li><a href="#design">Дизайн</a></li>
+                        <li class="has-submenu">
+                            <a href="#programming">Програмування <span class="submenu-arrow" aria-hidden="true">›</span></a>
+                            <ul class="dropdown dropdown--nested">
+                                <li><a href="#frontend">Frontend</a></li>
+                                <li><a href="#backend">Backend</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="horizontal-menu__item">
+                    <a class="horizontal-menu__link" href="#schedule" aria-label="Розклад">
+                        <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
+                        <span class="visually-hidden">Розклад</span>
+                    </a>
+                </li>
+                <li class="horizontal-menu__item">
+                    <a class="horizontal-menu__link" href="#resources" aria-label="Ресурси">
+                        <span class="material-symbols-outlined" aria-hidden="true">folder</span>
+                        <span class="visually-hidden">Ресурси</span>
+                    </a>
+                    <ul class="dropdown">
+                        <li><a href="#materials">Матеріали</a></li>
+                        <li><a href="#help">Допомога</a></li>
+                    </ul>
+                </li>
+                <li class="horizontal-menu__item horizontal-menu__item--right">
+                    <a class="horizontal-menu__link" href="#profile" aria-label="Профіль">
+                        <span class="material-symbols-outlined" aria-hidden="true">account_circle</span>
+                        <span class="visually-hidden">Профіль</span>
+                    </a>
+                    <ul class="dropdown dropdown--right">
+                        <li><a href="#account">Мій профіль</a></li>
+                        <li><a href="#settings">Налаштування</a></li>
+                        <li><a href="#logout">Вийти</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside class="sidebar">
+        <nav class="vertical-nav" aria-label="Бічна навігація">
+            <ul class="vertical-menu">
+                <li>
+                    <a class="vertical-menu__link" href="#home" aria-current="page">
+                        <span class="material-symbols-outlined" aria-hidden="true">dashboard</span>
+                        <span>Огляд</span>
+                    </a>
+                </li>
+                <li class="has-submenu">
+                    <a class="vertical-menu__link" href="#courses">
+                        <span class="material-symbols-outlined" aria-hidden="true">school</span>
+                        <span>Навчання</span>
+                        <span class="submenu-arrow" aria-hidden="true">›</span>
+                    </a>
+                    <ul class="vertical-submenu">
+                        <li><a href="#my-courses">Мої курси</a></li>
+                        <li class="has-submenu">
+                            <a href="#catalog">Каталог <span class="submenu-arrow" aria-hidden="true">›</span></a>
+                            <ul class="vertical-submenu">
+                                <li><a href="#web">Веброзробка</a></li>
+                                <li><a href="#design">Дизайн</a></li>
+                                <li><a href="#programming">Програмування</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#certificates">Сертифікати</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="vertical-menu__link" href="#schedule">
+                        <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
+                        <span>Розклад</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="vertical-menu__link" href="#messages">
+                        <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+                        <span>Повідомлення</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="vertical-menu__link" href="#settings">
+                        <span class="material-symbols-outlined" aria-hidden="true">settings</span>
+                        <span>Налаштування</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content" id="home">
+        <section class="welcome">
+            <p class="eyebrow">Навчальна платформа</p>
+            <h1>Вітаємо на курсах!</h1>
+            <p>Використовуйте меню навігації, щоб переглядати курси, розклад та навчальні матеріали.</p>
+        </section>
+
+        <nav class="sticky-nav" aria-label="Навігація сторінкою">
+            <a href="#courses">Курси</a>
+            <a href="#schedule">Розклад</a>
+            <a href="#resources">Ресурси</a>
+        </nav>
+
+        <section class="content-section" id="courses">
+            <h2>Курси</h2>
+            <p id="my-courses">Мої курси: переглядайте поточні навчальні програми.</p>
+            <p id="catalog">Каталог курсів зібраний за напрямами навчання.</p>
+            <p id="web">Веброзробка: HTML, CSS та сучасні технології для створення сайтів.</p>
+            <p id="design">Дизайн: основи композиції та створення зручних інтерфейсів.</p>
+            <p id="programming">Програмування: практичні заняття з розробки програм.</p>
+            <p id="frontend">Frontend: створення інтерфейсів вебзастосунків.</p>
+            <p id="backend">Backend: серверна логіка та робота з даними.</p>
+            <p id="certificates">Сертифікати доступні після завершення курсів.</p>
+        </section>
+        <section class="content-section" id="schedule">
+            <h2>Розклад</h2>
+            <p>Переглядайте заняття та плануйте свій навчальний тиждень.</p>
+        </section>
+        <section class="content-section" id="resources">
+            <h2>Навчальні ресурси</h2>
+            <p id="materials">Тут зібрані матеріали, корисні посилання та записи занять.</p>
+            <p id="help">Якщо виникли запитання, зверніться до служби підтримки.</p>
+        </section>
+        <section class="content-section" id="messages">
+            <h2>Повідомлення</h2>
+            <p>Тут відображаються повідомлення від викладачів та навчальної команди.</p>
+        </section>
+        <section class="content-section content-section--last" id="profile">
+            <h2>Особистий кабінет</h2>
+            <p id="account">Керуйте своїми курсами та особистою інформацією.</p>
+            <p id="settings">Налаштуйте вигляд і параметри облікового запису.</p>
+            <p id="logout">Дякуємо за навчання разом із нами!</p>
+        </section>
+    </main>
+</body>
+</html>
