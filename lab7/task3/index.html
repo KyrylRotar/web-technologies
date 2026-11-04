@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>New York Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="weather" aria-labelledby="city-name">
+        <header class="current">
+            <h1 id="city-name">New York, NY</h1>
+            <p class="current__date">Tuesday, April 15th</p>
+            <p class="current__condition">Overcast</p>
+
+            <div class="current__details">
+                <div class="current__temperature">
+                    <img src="icons/storm.svg" alt="" width="50" height="50">
+                    <span>58<sup>°F</sup></span>
+                </div>
+                <dl class="current__stats">
+                    <div><dt>Precipitation:</dt><dd>100%</dd></div>
+                    <div><dt>Humidity:</dt><dd>97%</dd></div>
+                    <div><dt>Wind:</dt><dd>4 mph SW</dd></div>
+                    <div><dt>Pollen Count:</dt><dd>36</dd></div>
+                </dl>
+            </div>
+        </header>
+
+        <section class="forecast" aria-label="Seven day forecast">
+            <article class="forecast__day">
+                <h2>Today</h2>
+                <img src="icons/storm.svg" alt="Thunderstorms" width="42" height="42">
+                <p class="forecast__temperatures"><strong>68°</strong><span>36°</span></p>
+                <p class="forecast__pollen">Pollen 36</p>
+            </article>
+            <article class="forecast__day">
+                <h2>Wednesday</h2>
+                <img src="icons/sunny.svg" alt="Sunny" width="42" height="42">
+                <p class="forecast__temperatures"><strong>50°</strong><span>39°</span></p>
+                <p class="forecast__pollen">Pollen 36</p>
+            </article>
+            <article class="forecast__day">
+                <h2>Thursday</h2>
+                <img src="icons/sunny.svg" alt="Sunny" width="42" height="42">
+                <p class="forecast__temperatures"><strong>55°</strong><span>39°</span></p>
+                <p class="forecast__pollen">Pollen 36</p>
+            </article>
+            <article class="forecast__day">
+                <h2>Friday</h2>
+                <img src="icons/partly-cloudy.svg" alt="Partly cloudy" width="42" height="42">
+                <p class="forecast__temperatures"><strong>54°</strong><span>43°</span></p>
+                <p class="forecast__pollen">Pollen 36</p>
+            </article>
+            <article class="forecast__day">
+                <h2>Saturday</h2>
+                <img src="icons/rainy.svg" alt="Rain showers" width="42" height="42">
+                <p class="forecast__temperatures"><strong>64°</strong><span>46°</span></p>
+                <p class="forecast__pollen">Pollen 36</p>
+            </article>
+            <article class="forecast__day">
+                <h2>Sunday</h2>
+                <img src="icons/rainy.svg" alt="Rain showers" width="42" height="42">
+                <p class="forecast__temperatures"><strong>64°</strong><span>50°</span></p>
+                <p class="forecast__pollen">Pollen 36</p>
+            </article>
+            <article class="forecast__day">
+                <h2>Monday</h2>
+                <img src="icons/partly-cloudy.svg" alt="Partly cloudy" width="42" height="42">
+                <p class="forecast__temperatures"><strong>61°</strong><span>50°</span></p>
+                <p class="forecast__pollen">Pollen 36</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
