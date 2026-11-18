@@ -1,0 +1,123 @@
+:root {
+  --page-bg: #111318;
+  --text: #f5f5f5;
+  --tree-bg: #fff;
+  --node-bg: #f6dc63;
+  --tree-gap: 4px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 28px 16px;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  width: min(1120px, 100%);
+  margin-inline: auto;
+}
+
+.page h1 {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.page__description {
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.page h2 {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.tree {
+  min-width: 680px;
+  height: 360px;
+  padding: 4px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--tree-gap);
+  overflow: hidden;
+  border: 2px solid var(--tree-bg);
+  background: var(--tree-bg);
+  counter-reset: tree-node;
+}
+
+.tree__level {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--tree-gap);
+  list-style: none;
+}
+
+.tree__level--one {
+  grid-template-rows: 1fr;
+}
+
+.tree__level--two {
+  grid-template-rows: 2fr 1fr;
+}
+
+.tree__level--three {
+  grid-template-rows: 1fr 2fr 1fr;
+}
+
+.tree__level--four {
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.tree__level--five {
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.tree__level--six {
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.tree__node {
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--tree-bg);
+  background: var(--node-bg);
+}
+
+.tree__node::before {
+  counter-increment: tree-node;
+  content: counter(tree-node);
+  color: var(--text);
+  font-family: Georgia, serif;
+  font-size: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+@media (max-width: 576px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .tree {
+    height: 320px;
+    overflow-x: auto;
+  }
+}
