@@ -1,0 +1,174 @@
+:root {
+  --page-bg: #111318;
+  --card-bg: #fff;
+  --ink: #242424;
+  --muted: #555;
+  --action-bg: #858585;
+  --grid-gap: 12px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 32px 16px;
+  background: var(--page-bg);
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  width: min(1120px, 100%);
+  margin-inline: auto;
+}
+
+.page__title {
+  margin-bottom: 18px;
+  color: var(--card-bg);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(190px, auto)) auto;
+  grid-template-areas:
+    "featured featured tall"
+    "featured featured tall"
+    "forest city cafe";
+  gap: var(--grid-gap);
+}
+
+.card {
+  min-width: 0;
+  overflow: hidden;
+  background: var(--card-bg);
+  box-shadow: 0 2px 6px rgb(0 0 0 / 28%);
+}
+
+.card--featured {
+  grid-area: featured;
+}
+
+.card--tall {
+  grid-area: tall;
+}
+
+.card:nth-of-type(3) {
+  grid-area: forest;
+}
+
+.card:nth-of-type(4) {
+  grid-area: city;
+}
+
+.card:nth-of-type(5) {
+  grid-area: cafe;
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+  height: 156px;
+  object-fit: cover;
+}
+
+.card--featured .card__image {
+  height: clamp(220px, 35vw, 330px);
+}
+
+.card--tall .card__image {
+  height: 156px;
+}
+
+.card__content {
+  min-width: 0;
+  padding: 14px;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.card p {
+  max-height: 4.5em;
+  margin-bottom: 12px;
+  overflow: auto;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.card--tall p {
+  max-height: 7.5em;
+}
+
+.card__action {
+  display: block;
+  padding: 8px 12px;
+  background: var(--action-bg);
+  color: var(--card-bg);
+  font-size: 0.8125rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.card__action:hover,
+.card__action:focus-visible {
+  background: #555;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 24px 14px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas:
+      "featured featured"
+      "tall forest"
+      "city cafe";
+  }
+
+  .card--featured .card__image {
+    height: clamp(220px, 40vw, 300px);
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    padding: 18px 10px;
+  }
+
+  .cards {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "featured"
+      "tall"
+      "forest"
+      "city"
+      "cafe";
+    gap: 10px;
+  }
+
+  .card--featured .card__image,
+  .card__image {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}

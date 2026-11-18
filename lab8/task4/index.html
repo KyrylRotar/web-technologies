@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Картки — CSS Grid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <h1 class="page__title">Історії з мандрів</h1>
+
+    <section class="cards" aria-label="Картки про подорожі">
+      <article class="card card--featured" id="featured">
+        <img class="card__image" src="assets/featured.jpg" alt="Гірське селище серед осіннього лісу">
+        <div class="card__content">
+          <h2>Подорож за горизонт</h2>
+          <p>Відкривайте нові місця, знайомтеся з природою та збирайте враження, які залишаться з вами надовго.</p>
+          <a class="card__action" href="#featured">Читати історію</a>
+        </div>
+      </article>
+
+      <article class="card card--tall">
+        <img class="card__image" src="assets/tall.jpg" alt="Будинки з червоними віконницями">
+        <div class="card__content">
+          <h2>Місто кольорів</h2>
+          <p>Кожна вулиця має свій характер. Знайдіть час, щоб роздивитися деталі, архітектуру та неспішний ритм старого міста.</p>
+          <a class="card__action" href="#city">Дізнатися більше</a>
+        </div>
+      </article>
+
+      <article class="card" id="forest">
+        <img class="card__image" src="assets/forest.jpg" alt="Туманний осінній ліс">
+        <div class="card__content">
+          <h2>Тиша лісу</h2>
+          <p>Маршрут для тих, хто цінує спокій, свіже повітря та довгі прогулянки.</p>
+          <a class="card__action" href="#forest">Читати далі</a>
+        </div>
+      </article>
+
+      <article class="card" id="city">
+        <img class="card__image" src="assets/city.jpg" alt="Велосипедист на міській вулиці">
+        <div class="card__content">
+          <h2>Міський маршрут</h2>
+          <p>Плануйте зупинки, але залишайте місце для спонтанних відкриттів.</p>
+          <a class="card__action" href="#city">Дослідити</a>
+        </div>
+      </article>
+
+      <article class="card" id="cafe">
+        <img class="card__image" src="assets/cafe.jpg" alt="Затишне кафе з теплим світлом">
+        <div class="card__content">
+          <h2>Смак подорожі</h2>
+          <p>Локальні кав'ярні часто розповідають про місто більше за путівники.</p>
+          <a class="card__action" href="#cafe">Знайти місце</a>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
